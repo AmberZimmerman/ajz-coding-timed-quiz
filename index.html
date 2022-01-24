@@ -10,20 +10,22 @@
 <body>
     <header class="top-bar">
         <div class="highscores">View Highscores</div>
-        <div class="timer">Show Timer</div>
+        <div class="timer">
             <div class="time-left">Time Left</div>
             <div class="countdown">75</div>
+        </div>
     </header>
         <!-- This will be the beginging screen. Adding hide class to eventually hide -->
         <div class="start-container">
             <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
-            <p>You will have 75 seconds to answer up to five questions. Every time you select a wrong answer, 10 seconds will be deducted from the clock. When you finish the questions or the timer reaches 0, the game will be over. Your score will be the amount of time left.</p>
+            <p>You will have 75 seconds to answer up to five questions. Every time you select a wrong answer, 10 seconds will be deducted from the clock. When you finish the questions or the timer reaches 0, the game will be over. You can only select an answer once and you can not exit the quiz once it is started. Your score will be the amount of time left.</p>
         <!-- Start button to begin the quiz -->
-            <button id="start-btn">Start</button>
+            <button id="start-btn">Start Quiz</button>
         </div>
         
+        <!-- Question quiz box -->
         <div id="question-container">
-            <h2 id="question">Quiz question goes here</h2>
+            <h2 id="question"></h2>
             <div id="answers">
                 <button id="option1">Option One</button>
                 <button id="option2">Option Two</button>
