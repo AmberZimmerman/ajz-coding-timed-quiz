@@ -50,7 +50,7 @@ button {
     cursor: pointer;
 }
 
-#finished {
+.finished {
     display: flex;
     display: block;
     visibility: hidden;
@@ -61,4 +61,16 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     /* prevent default */
+}
+
+.highscores {
+    display: flex;
+    display: block;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
