@@ -22,6 +22,8 @@ const startContainer = document.getElementById('start-container');
 const questionContainer = document.getElementById('question-container');
 const answers = document.getElementById('answers');
 const countdown = document.getElementById('countdown');
+const goBack = document.getElementById('back');
+const clear = document.getElementById('clear');
 
 // Function to start the quiz
 startBtn.onclick = function () {
@@ -120,4 +122,12 @@ function beginTimer() {
             // Need to call a function to enter in your initials to save highscore
         }
     }, 1000);
+}
+
+
+// Function to restart the quiz
+goBack.onclick = function () {
+    startBtn.style.display = "visible";
+    startContainer.style.display = "visible";
+    questionContainer.style.visibility = "none";
 }
