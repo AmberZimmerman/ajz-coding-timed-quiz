@@ -30,9 +30,17 @@ startBtn.onclick = function () {
     startBtn.style.display = "none";
     startContainer.style.display = "none";
     questionContainer.style.visibility = "visible";
+    showQuestions();
 }
 
 // Function to Go to the Next Question
+
+let que_count = 0;
+function showQuestions(){
+    const questionContainer = document.getElementById('question-container');
+    let queTag = quizQuestions[0].question;
+    questionContainer.innerHTML = queTag; 
+}
 
 
 
