@@ -14,13 +14,14 @@
             <div class="time-left">Time Left</div>
             <div class="countdown">75</div>
     </header>
-    <div class="container">
         <!-- This will be the beginging screen. Adding hide class to eventually hide -->
-        <div class="start-container" class="hide">
-            <h1 class="quiz-challenge">The Coding Quiz Challenge</h1>
+        <div class="start-container">
+            <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
+            <p>You will have 75 seconds to answer up to five questions. Every time you select a wrong answer, 10 seconds will be deducted from the clock. When you finish the questions or the timer reaches 0, the game will be over. Your score will be the amount of time left.</p>
         <!-- Start button to begin the quiz -->
             <button id="start-btn">Start</button>
         </div>
+        
         <div id="question-container">
             <h2 id="question">Quiz question goes here</h2>
             <div id="answers">
@@ -30,14 +31,8 @@
                 <button id="option4">Option Four</button>
             </div>
         </div>
-        <!-- This is where the control buttons will go, don't need these those
-        <div class ="buttons">
-            <button class="quit">End Quiz</button>
-            <button class="continue">Continue</button>
-        </div> -->
-    </div>
-
-
+    
+ 
       <!-- Linking javascript, always goes right before the end body tag -->
       <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
