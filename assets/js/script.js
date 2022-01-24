@@ -21,10 +21,14 @@ const startBtn = document.getElementById('start-btn');
 const startContainer = document.getElementById('start-container');
 const questionContainer = document.getElementById('question-container');
 const answers = document.getElementById('answers');
-const timeLeft = document.getElementById('countdown');
+const countdown = document.getElementById('countdown');
 
 // Function to start the quiz
-
+startBtn.onclick = function () {
+    startBtn.style.display = "none";
+    startContainer.style.display = "none";
+    questionContainer.style.visibility = "visible";
+}
 
 // Function to Go to the Next Question
 
@@ -82,12 +86,12 @@ let quizQuestions = [
         // question and answers 5
         numb: 5,
         question: "This artist let her husband take credit for being the creator of her Big Eye paintings. She finally proved to be the true artist by live painting in a court battle",
-       options: [ 
+        options: [ 
            "Barbara Stearn",
             "Artemesia Gentileschi",
             "Margaret Keane",
             "Georgia O'Keefe"
-       ]
+        ]
     }
 
     ]
