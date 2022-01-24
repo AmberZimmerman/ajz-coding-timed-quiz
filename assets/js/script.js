@@ -44,6 +44,7 @@ let quizQuestions = [
         // question and answers 1
         numb: 1,
         question: "Complete the title of this Salvador Dali Painting: Gala Contemplating the Mediterranean Sea which at Twenty Meters Becomes the Portrait of ____",
+        answer: "Abraham Lincoln",
         options: [ 
             "Thomas Edison",
             "Alexander Hamilton",
@@ -56,6 +57,7 @@ let quizQuestions = [
         // question and answers 2
         numb: 2,
         question: "Caravaggio employed this technique during the Baroque period and made it a dominant stylistic element",
+        answer: "Tenebrism",
         options: [ 
             "Tempera painting",
             "Impasto",
@@ -67,6 +69,7 @@ let quizQuestions = [
         // question and answers 3
         numb: 3,
         question: "Between 1900-1905, Henri Matisse was part of a group called the Fauves, otherwise known as",
+        answer: "Wild Beasts",
         options: [ 
             "Delicate Brush",
             "Colorful Children",
@@ -78,6 +81,7 @@ let quizQuestions = [
         // question and answers 4
         numb: 4,
         question: "During Frida Kahlo's first solo exhibit, she was not supposed to attend but instead surprised guests by",
+        answer: "Arriving on a stretcher before being placed in her bed in the middle of the exhibit",
         options: [ 
             "Propelling from the ceiling into the middle of the room",
             "Dancing into the room surrounded by monkeys",
@@ -89,6 +93,7 @@ let quizQuestions = [
         // question and answers 5
         numb: 5,
         question: "This artist let her husband take credit for being the creator of her Big Eye paintings. She finally proved to be the true artist by live painting in a court battle",
+        answer: "Margaret Keane",
         options: [ 
            "Barbara Stearn",
             "Artemesia Gentileschi",
