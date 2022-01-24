@@ -2,6 +2,28 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+.top-bar .timer {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+}
+
+#start-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #question-container {
     width: 500px;
     align-items: center;
@@ -20,4 +42,9 @@ button {
     background-color:cornflowerblue;
     border-radius: 1rem;
     display: block;
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }

@@ -33,6 +33,7 @@ startBtn.onclick = function () {
 // Function to Go to the Next Question
 
 
+
 // Function to pick answers
 
 let quizQuestions = [
