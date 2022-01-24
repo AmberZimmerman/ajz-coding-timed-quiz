@@ -10,7 +10,7 @@ body {
     display: block;
     padding: 20px 20px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

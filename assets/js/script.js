@@ -12,10 +12,30 @@
  * Highscore page with initials and score
  * Button to go back
  * Button to clear score
- * Doesn't have to be about coding
  * may want to make seconds less a less than condition
  * key value pairs
  */
+
+// Declaring variables to call elements
+const startBtn = document.getElementById('start-btn');
+const startContainer = document.getElementById('start-container');
+const questionContainer = document.getElementById('question-container');
+const answers = document.getElementById('answers');
+const timeLeft = document.getElementById('countdown');
+
+// Function to start the quiz
+startBtn.addEventListener('click', startGame) 
+
+function startGame() {
+    console.log('Started')
+    startBtn.classList.add('hide');
+    startContainer.classList.add('hide');
+}
+
+// Function to Go to the Next Question
+
+
+// Function to pick answers
 
 let quizQuestions = [
     {
