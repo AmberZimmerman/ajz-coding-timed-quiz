@@ -20,31 +20,78 @@
 const startBtn = document.getElementById('start-btn');
 const startContainer = document.getElementById('start-container');
 const questionContainer = document.getElementById('question-container');
+const questionText = document.getElementById('question-text');
 const answers = document.getElementById('answers');
 const countdown = document.getElementById('countdown');
 const goBack = document.getElementById('back');
 const clear = document.getElementById('clear');
+let option = document.querySelectorAll('.option');
+let index = 0;
 
 // Function to start the quiz
 startBtn.onclick = function () {
     startBtn.style.display = "none";
     startContainer.style.display = "none";
     questionContainer.style.visibility = "visible";
-    showQuestions();
+    answers.style.visibility = "visible";
+    showQuestions(index);
 }
 
-// Function to Go to the Next Question
+// Function to show question and options
 
-let que_count = 0;
-function showQuestions(){
-    const questionContainer = document.getElementById('question-container');
-    let queTag = quizQuestions[0].question;
-    questionContainer.innerHTML = queTag; 
+let queCount = 0;
+
+function showQuestions(index){
+    const optionList = document.getElementById('answers');
+    questionContainer.innerText = quizQuestions[index].question;
+    while (optionList.firstChild) {
+        optionList.removeChild(optionList.firstChild);
+      }
+    // let optionTag = '<div class="option">' + quizQuestions[index].options[0] + '</div>'
+    //                 + '<div class="option">' + quizQuestions[index].options[1] + '</div>'
+    //                 + '<div class="option">' + quizQuestions[index].options[2] + '</div>'
+    //                 + '<div class="option">' + quizQuestions[index].options[3] + '</div>';
+    // questionContainer.innerHTML = queTag;
+    // optionList.innerHTML = optionTag; 
+    // option.textContent = quizQuestions[index].options[0];
+    // console.log(quizQuestions[index].options[0]);
+    for (let i = 0; i < quizQuestions[index].options.length; i++) {
+        const element = document.createElement('button');
+        element.textContent = quizQuestions[index].options[i];
+        element.classList.add("anything");
+        optionList.appendChild(element);
+        console.log(element);   
+    }
 }
 
+document.addEventListener('click', function(){
+    index++
+    showQuestions(index);
+    if (index > 5) {
+        
+    }
+}); 
 
 
-// Function to pick answers
+
+
+// Function to click right answer and display next question
+// if (quizQuestions.answer == true) 
+
+// disable buttons after click
+
+function correctAnswer(event){
+    console.log('event');
+}
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const buttons = document.querySelectorAll('button')
+  
+//     for (const button of buttons) {
+//       button.addEventListener('click', correctAnswer(event))
+//     }
+//   })
+
 
 let quizQuestions = [
     {

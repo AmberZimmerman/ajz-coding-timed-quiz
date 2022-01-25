@@ -39,6 +39,20 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#answers {
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: block;
+    visibility: hidden;
+    padding: 20px 20px;
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 button {
     background-color:cornflowerblue;
     border-radius: 1rem;
