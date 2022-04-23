@@ -60,8 +60,13 @@ button {
     font-size: 18px;
     padding: 10px;
     outline: none;
-    border: none;
+    border: 1px solid;
+    border-color: cornflowerblue;
     cursor: pointer;
+}
+
+button:hover {
+    background-color:white;
 }
 
 .finished {

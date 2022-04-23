@@ -38,7 +38,8 @@ startBtn.onclick = function () {
     startContainer.style.display = "none";
     questionContainer.style.visibility = "visible";
     answers.style.visibility = "visible";
-    // showQuestions(index);
+    showQuestions(index);
+    beginTimer(secondsLeft);
 }
 
 // Function to show question and options
@@ -53,6 +54,8 @@ function showQuestions(index){
     option4.innerText = quizQuestions[index].options[3];
 
     console.log(quizQuestions[index])
+
+     // const optionList = document.getElementById('answers');
 
     // while (optionList.firstChild) {
     //     optionList.removeChild(optionList.firstChild);
@@ -69,15 +72,15 @@ function showQuestions(index){
 }
 
 document.addEventListener('click', function(){
-    // const optionList = document.getElementById('answers');
-
-    showQuestions(index);
-
-
-
-    index++
-    if (index > 5) {
-
+   
+    if (index < quizQuestions.length) {
+        showQuestions(index);
+        index++
+    } else {
+        startBtn.style.display = "visible";
+        startContainer.style.display = "visible";
+        questionContainer.style.visibility = "none";
+        answers.style.visibility = "none";
     }
 }); 
 
@@ -93,8 +96,15 @@ function correctAnswer(event){
     console.log('event');
     const selection = document.querySelectorAll('button')
     if (selection.innerText === quizQuestions[index].answer) {
-
+        queCount + 5;
+        console.log(queCount)
+    } else {
+        secondsLeft - 5;
     }
+}
+
+function endgame() {
+    
 }
 
 
