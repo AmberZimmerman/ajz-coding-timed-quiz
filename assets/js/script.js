@@ -22,6 +22,10 @@ const startContainer = document.getElementById('start-container');
 const questionContainer = document.getElementById('question-container');
 const questionText = document.getElementById('question-text');
 const answers = document.getElementById('answers');
+const option1 = document.querySelector('.option1')
+const option2 = document.querySelector('.option2')
+const option3 = document.querySelector('.option3')
+const option4 = document.querySelector('.option4')
 const countdown = document.getElementById('countdown');
 const goBack = document.getElementById('back');
 const clear = document.getElementById('clear');
@@ -34,7 +38,7 @@ startBtn.onclick = function () {
     startContainer.style.display = "none";
     questionContainer.style.visibility = "visible";
     answers.style.visibility = "visible";
-    showQuestions(index);
+    // showQuestions(index);
 }
 
 // Function to show question and options
@@ -42,33 +46,38 @@ startBtn.onclick = function () {
 let queCount = 0;
 
 function showQuestions(index){
-    const optionList = document.getElementById('answers');
     questionContainer.innerText = quizQuestions[index].question;
-    while (optionList.firstChild) {
-        optionList.removeChild(optionList.firstChild);
-      }
-    // let optionTag = '<div class="option">' + quizQuestions[index].options[0] + '</div>'
-    //                 + '<div class="option">' + quizQuestions[index].options[1] + '</div>'
-    //                 + '<div class="option">' + quizQuestions[index].options[2] + '</div>'
-    //                 + '<div class="option">' + quizQuestions[index].options[3] + '</div>';
-    // questionContainer.innerHTML = queTag;
-    // optionList.innerHTML = optionTag; 
-    // option.textContent = quizQuestions[index].options[0];
-    // console.log(quizQuestions[index].options[0]);
-    for (let i = 0; i < quizQuestions[index].options.length; i++) {
-        const element = document.createElement('button');
-        element.textContent = quizQuestions[index].options[i];
-        element.classList.add("anything");
-        optionList.appendChild(element);
-        console.log(element);   
-    }
+    option1.innerText = quizQuestions[index].options[0];
+    option2.innerText = quizQuestions[index].options[1];
+    option3.innerText = quizQuestions[index].options[2];
+    option4.innerText = quizQuestions[index].options[3];
+
+    console.log(quizQuestions[index])
+
+    // while (optionList.firstChild) {
+    //     optionList.removeChild(optionList.firstChild);
+    //   }
+
+    // for (let i = 0; i < quizQuestions[i].options.length; i++) {
+    //     const element = document.createElement('button');
+    //     element.textContent = quizQuestions[index].options[i];
+    //     element.classList.add("anything");
+    //     optionList.appendChild(element);
+    //     console.log(element);   
+    // }
+
 }
 
 document.addEventListener('click', function(){
-    index++
+    // const optionList = document.getElementById('answers');
+
     showQuestions(index);
+
+
+
+    index++
     if (index > 5) {
-        
+
     }
 }); 
 
@@ -82,15 +91,12 @@ document.addEventListener('click', function(){
 
 function correctAnswer(event){
     console.log('event');
+    const selection = document.querySelectorAll('button')
+    if (selection.innerText === quizQuestions[index].answer) {
+
+    }
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const buttons = document.querySelectorAll('button')
-  
-//     for (const button of buttons) {
-//       button.addEventListener('click', correctAnswer(event))
-//     }
-//   })
 
 
 let quizQuestions = [
