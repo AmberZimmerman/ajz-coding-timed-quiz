@@ -194,19 +194,19 @@ for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
 
             answers.innerHTML = '';
             
-            if (questionNumber < quizQuestions.length) {
-                questionNumber++;
-                showQuestions(questionNumber);
+            advanceQuestion();
 
-            answers.innerHTML = '';
-               
-        }
         } else {
             console.log("you eat a frog eye")
             secondsLeft = secondsLeft - 5;
             // change button to red
             this.style.backgroundColor = "red";
             this.style.borderColor = "red";
+
+            answers.innerHTML = '';
+
+            advanceQuestion();
+
         }
     })
 }
@@ -224,13 +224,13 @@ function getRightAnswer() {
 }
 
 
-// function advanceQuestion() {
-//   if (questionNumber < quizQuestions.length) {
-//     showQuestions(questionNumber);
-//     questionNumber++;
-//   }
-// }
-console.log(answerBtn)
+function advanceQuestion() {
+  if (questionNumber < quizQuestions.length) {
+    questionNumber++;
+    showQuestions(questionNumber);
+  }
+}
+
 
 
 function userAnswer() {
