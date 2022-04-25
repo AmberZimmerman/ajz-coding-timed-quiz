@@ -179,6 +179,9 @@ for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
     generatedButton.innerText = quizQuestions[questionNumber].options[i];
     answers.append(generatedButton)
 
+    // gives each element it's own data attribute
+    generatedButton.setAttribute("data-option", quizQuestions[questionNumber].options[i]);
+
     generatedButton.addEventListener("click", () => {
         console.log("BUTTON IS CLICKED")
     })
