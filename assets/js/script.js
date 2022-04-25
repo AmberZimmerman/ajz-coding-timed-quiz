@@ -180,10 +180,25 @@ for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
     answers.append(generatedButton)
 
     // gives each element it's own data attribute
+    // storing data in html element butoon to refer to it later
     generatedButton.setAttribute("data-option", quizQuestions[questionNumber].options[i]);
 
-    generatedButton.addEventListener("click", () => {
-        console.log("BUTTON IS CLICKED")
+    generatedButton.addEventListener("click", function clicky() {
+        console.log(this)
+        let selectedOption = this.dataset.option;
+        console.log(selectedOption)
+
+        if (selectedOption === quizQuestions[questionNumber].answer) {
+            console.log("you're right")
+            this.style.backgroundColor = "green";
+            this.style.borderColor = "green";
+        } else {
+            console.log("you eat a frog eye")
+            secondsLeft = secondsLeft - 5;
+            // change button to red
+            this.style.backgroundColor = "red";
+            this.style.borderColor = "red";
+        }
     })
 }
 
