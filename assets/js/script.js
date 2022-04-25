@@ -126,10 +126,12 @@ let quizQuestions = [
     },
   ];
 
+
 let questionNumber = 0;
 let score = 0;
-// Define max timer amount or start time at begining
 let secondsLeft = 75;
+let highScores = [];
+let timerInterval;
 
 // Declaring variables to call elements
 const startBtn = document.getElementById("start-btn");
@@ -147,7 +149,7 @@ const countdown = document.getElementById("countdown");
 const goBack = document.getElementById("back");
 const clear = document.getElementById("clear");
 let option = document.querySelectorAll(".option");
-const button = document.querySelectorAll(".btn");
+const answerBtn = document.querySelector(".answer-btn");
 
 
 
@@ -157,28 +159,34 @@ startBtn.onclick = function () {
   startContainer.style.display = "none";
   questionContainer.style.visibility = "visible";
   answers.style.visibility = "visible";
-  showQuestions(index);
+  showQuestions();
   beginTimer(secondsLeft);
-  // advanceQuestion();
-  // goAgain();
-  getRightAnswer();
-  doNext();
 };
 
 // Function to show question and options
 
 
-function showQuestions(questionNumber) {
+function showQuestions() {
   questionContainer.innerText = quizQuestions[questionNumber].question;
-  option1.innerText = quizQuestions[questionNumber].options[0];
-  option2.innerText = quizQuestions[questionNumber].options[1];
-  option3.innerText = quizQuestions[questionNumber].options[2];
-  option4.innerText = quizQuestions[questionNumber].options[3];
+//   option1.innerText = quizQuestions[questionNumber].options[0];
+//   option2.innerText = quizQuestions[questionNumber].options[1];
+//   option3.innerText = quizQuestions[questionNumber].options[2];
+//   option4.innerText = quizQuestions[questionNumber].options[3];
 
-  console.log(quizQuestions[questionNumber]);
+for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
+    console.log("im confused")
+    let generatedButton = document.createElement("button");
+    generatedButton.innerText = quizQuestions[questionNumber].options[i];
+    answers.append(generatedButton)
+
+    generatedButton.addEventListener("click", () => {
+        console.log("BUTTON IS CLICKED")
+    })
 }
 
 
+  console.log(quizQuestions[questionNumber]);
+}
 
 
 function getRightAnswer() {
@@ -189,20 +197,15 @@ function getRightAnswer() {
   console.log(questionAnswer);
 }
 
-function doNext() {
-  document.addEventListener("click", function () {
-    if (quizQuestions[questionNumber].answer === button.innerText) {
-      advanceQuestion();
-    }
-  });
-}
 
-function advanceQuestion() {
-  if (questionNumber < quizQuestions.length) {
-    showQuestions(questionNumber);
-    questionNumber++;
-  }
-}
+// function advanceQuestion() {
+//   if (questionNumber < quizQuestions.length) {
+//     showQuestions(questionNumber);
+//     questionNumber++;
+//   }
+// }
+console.log(answerBtn)
+
 
 function userAnswer() {
   button.addEventListener("click", () => {
@@ -222,17 +225,11 @@ function userAnswer() {
 
 // disable buttons after click
 
-function correctAnswer() {
-  const selection = document.querySelectorAll("btn");
-  if (selection.innerText === quizQuestions[questionNumber].answer) {
-    queCount + 5;
-    console.log(queCount);
-  } else {
-    secondsLeft - 5;
-  }
-}
 
-function endgame() {}
+
+function endgame() {
+    console.log("game is over");
+}
 
 
 // use dot notation to get values from an object
@@ -247,13 +244,14 @@ let timerEl = document.querySelector(".timer");
 
 // Create a function that will start the countdown once called and set the interval in a variable so that it could be saved or cleared later
 function beginTimer() {
-  let timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
     secondsLeft--;
     timerEl.textContent = secondsLeft + " seconds remaining";
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
       // Need to call a function to enter in your initials to save highscore
+      endgame();
     }
   }, 1000);
 }
