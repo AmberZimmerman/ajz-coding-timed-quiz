@@ -168,10 +168,7 @@ startBtn.onclick = function () {
 
 function showQuestions() {
   questionContainer.innerText = quizQuestions[questionNumber].question;
-//   option1.innerText = quizQuestions[questionNumber].options[0];
-//   option2.innerText = quizQuestions[questionNumber].options[1];
-//   option3.innerText = quizQuestions[questionNumber].options[2];
-//   option4.innerText = quizQuestions[questionNumber].options[3];
+
 
 for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
     console.log("im confused")
@@ -192,6 +189,18 @@ for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
             console.log("you're right")
             this.style.backgroundColor = "green";
             this.style.borderColor = "green";
+            score++;
+            console.log(score)
+
+            answers.innerHTML = '';
+            
+            if (questionNumber < quizQuestions.length) {
+                questionNumber++;
+                showQuestions(questionNumber);
+
+            answers.innerHTML = '';
+               
+        }
         } else {
             console.log("you eat a frog eye")
             secondsLeft = secondsLeft - 5;
@@ -201,7 +210,6 @@ for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
         }
     })
 }
-
 
   console.log(quizQuestions[questionNumber]);
 }
