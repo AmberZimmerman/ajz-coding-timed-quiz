@@ -1,95 +1,104 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.img-hero {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 25px;
 }
 
 .top-bar .timer {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
 }
 
 #start-container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #question-container {
-    width: 550px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    display: block;
-    visibility: hidden;
-    /* display: none; */
-    padding: 20px 20px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 550px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  display: block;
+  visibility: hidden;
+  /* display: none; */
+  padding: 20px 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #answers {
-    width: 550px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    display: block;
-    visibility: hidden;
-    padding: 20px 20px;
-    position: absolute;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 550px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  display: block;
+  visibility: hidden;
+  padding: 20px 20px;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
-    background-color:cornflowerblue;
-    border-radius: 1rem;
-    display: block;
-    font-size: 18px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid;
-    border-color: cornflowerblue;
-    cursor: pointer;
+  background-color: cornflowerblue;
+  border-radius: 1rem;
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid;
+  border-color: cornflowerblue;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color:white;
+  background-color: white;
 }
 
 .finished {
-    display: flex;
-    display: block;
-    visibility: hidden;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* prevent default */
+  display: flex;
+  display: block;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* prevent default */
 }
 
 .highscores {
-    display: flex;
-    display: block;
-    visibility: hidden;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: flex;
+  display: block;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

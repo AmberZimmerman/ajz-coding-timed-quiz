@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../ajz-coding-timed-quiz/assets/css/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../ajz-coding-timed-quiz/assets/css/style.css"
+      rel="stylesheet"
+    />
+
     <title>Art History Quiz Challenge</title>
-</head>
-<body>
+  </head>
+  <body>
+    <img
+      class="img-hero"
+      src="./assets/images/pexels-sơn-bờm-1773168.jpg"
+      alt="Flamingos in water"
+    />
+
     <header class="top-bar">
-        <div class="view-highscores">View Highscores</div>
-        <div class="timer">
-            <div class="time-left">Time Left</div>
-            <div id="countdown">75</div>
-        </div>
+      <div class="view-highscores">View Highscores</div>
+      <div class="timer">
+        <div class="time-left">Time Left</div>
+        <div id="countdown">75</div>
+      </div>
     </header>
-        <!-- This will be the beginging screen. Adding hide class to eventually hide -->
-        <div id="start-container">
-            <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
-            <p>You will have 75 seconds to answer up to five questions. Every time you select a wrong answer, 10 seconds will be deducted from the clock. When you finish the questions or the timer reaches 0, the game will be over. You can only select an answer once and you can not exit the quiz once it is started. Your score will be the amount of time left.</p>
-        <!-- Start button to begin the quiz -->
-            <button id="start-btn">Start Quiz</button>
-        </div>
-        
-        <!-- Question quiz box -->
-        <div>
-        <h2 id="question-container"></h2>
-            <div id="answers">
-                <!-- <button class="answer-btn option1"></button>
+    <!-- This will be the beginging screen. Adding hide class to eventually hide -->
+    <div id="start-container">
+      <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
+      <p>
+        You will have 75 seconds to answer up to five questions. Every time you
+        select a wrong answer, 10 seconds will be deducted from the clock. When
+        you finish the questions or the timer reaches 0, the game will be over.
+        You can only select an answer once and you can not exit the quiz once it
+        is started. Your score will be the amount of time left.
+      </p>
+      <!-- Start button to begin the quiz -->
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- Question quiz box -->
+    <div>
+      <h2 id="question-container"></h2>
+      <div id="answers">
+        <!-- <button class="answer-btn option1"></button>
                 <button class="answer-btn option2"></button>
                 <button class="answer-btn option3"></button>
                 <button class="answer-btn option4"></button> -->
-            </div>
-        </div>
+      </div>
+    </div>
 
-        <!-- All Done! -->
-        <div class="finished">
-            <h2 class="all-done">All Done!</h2>
-            <div class="final-score">You're final score is..</div>
-            <form id="myForm">
-                Your Initials: <input type="text" name="fname" value="Donald">
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+    <!-- All Done! -->
+    <div class="finished">
+      <h2 class="all-done">All Done!</h2>
+      <div class="final-score">You're final score is..</div>
+      <form id="myForm">
+        Your Initials: <input type="text" name="fname" value="Donald" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
 
-        <!-- Highscores -->
-        <div class="highscores">
-            <div class="display-initials">Submitted initials here</div>
-            <div class="highscore-buttons">
-                <button id="back">Go Back</button>
-                <button id="clear">Clear Highscores</button>
-            </div>
-        </div>
-    
- 
-      <!-- Linking javascript, always goes right before the end body tag -->
-      <script type="text/javascript" src="assets/js/script.js"></script>
-</body>
+    <!-- Highscores -->
+    <div class="highscores">
+      <div class="display-initials">Submitted initials here</div>
+      <div class="highscore-buttons">
+        <button id="back">Go Back</button>
+        <button id="clear">Clear Highscores</button>
+      </div>
+    </div>
 
+    <!-- Linking javascript, always goes right before the end body tag -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
 </html>
