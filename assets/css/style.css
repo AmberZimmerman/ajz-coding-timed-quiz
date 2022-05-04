@@ -1,14 +1,50 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.landing-page {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flexbox;
+  flex-direction: column;
+}
+
+.landing-page-left {
+  flex: 1 0 40%;
+  width: 40%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.landing-page-right {
+  flex: 1 0 60%;
+  width: 60%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.flamingo-text {
+  font-family: "Montserrat Alternates", sans-serif;
+  margin: 0px 0px -10px 0px;
+  text-transform: uppercase;
+  color: white;
 }
 
 .img-hero {
+  flex: 1 0 100%;
   object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+  width: 65vw;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  /* transform: translate(-50%, -50%); */
 }
 
 .top-bar {
