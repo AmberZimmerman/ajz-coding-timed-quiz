@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 800;
@@ -10,41 +15,56 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  display: flexbox;
-  flex-direction: column;
+  display: flex;
+  position: relative;
 }
 
 .landing-page-left {
   flex: 1 0 40%;
-  width: 40%;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   flex-direction: column;
+}
+
+.factual-text {
+  margin-top: 450px;
+  color: white;
+  text-align: center;
+  font-weight: light;
 }
 
 .landing-page-right {
   flex: 1 0 60%;
-  width: 60%;
-  height: 100vh;
-  flex-direction: column;
+  /* height: 100vh;
+  flex-direction: column; */
+  height: auto;
+  width: 100vw;
+  flex-flow: column;
+  overflow: hidden;
 }
 
 .flamingo-text {
+  position: absolute;
+  height: 30vh;
+}
+
+.title-text {
   font-family: "Montserrat Alternates", sans-serif;
-  margin: 0px 0px -10px 0px;
+  margin: 0px 0px -25px 0px;
   text-transform: uppercase;
   color: white;
+  font-size: 4.8em;
+  font-style: itallic;
+  font-weight: 800;
 }
 
 .img-hero {
-  flex: 1 0 100%;
+  flex: 1 0 70%;
   object-fit: cover;
-  width: 65vw;
+  width: 765px;
   height: auto;
-  display: block;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-  /* transform: translate(-50%, -50%); */
+  display: flex;
+  margin: 262px 0px;
 }
 
 .top-bar {
