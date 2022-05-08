@@ -33,7 +33,7 @@
 .para-1 {
   color: white;
   font-family: "Nunito Sans", sans-serif;
-  padding: 25px;
+  margin: 25px;
   text-align: center;
 }
 
@@ -44,7 +44,21 @@
   display: inline-block;
   border-color: white;
   border-style: solid;
-  margin-top: 50px;
+  /* margin-top: 50px; */
+}
+
+.hide {
+  display: none;
+}
+
+.circle:hover {
+  background-color: white;
+}
+
+.circle:hover + .hide {
+  display: block;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .centered {
