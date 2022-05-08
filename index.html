@@ -26,7 +26,7 @@
     <title>Fussy Flamingo Quiz Challenge</title>
   </head>
   <body>
-    <div class="landing-page">
+    <div class="landing-page" id="start-container">
       <div class="landing-page-left">
         <h3 class="factual-text">Factual or far-flung?</h3>
         <p class="para-1">
@@ -40,7 +40,7 @@
           clock once the game ends will be your final score.
         </p>
 
-        <div class="circle"></div>
+        <div class="circle" id="start-btn"></div>
         <h3 class="hide">Start Timer</h3>
       </div>
 
@@ -59,13 +59,13 @@
       </div>
     </div>
 
-    <!-- <header class="top-bar">
+    <header class="top-bar">
       <div class="view-highscores">View Highscores</div>
       <div class="timer">
         <div class="time-left">Time Left</div>
         <div id="countdown">75</div>
       </div>
-    </header> -->
+    </header>
     <!-- This will be the beginging screen. Adding hide class to eventually hide -->
     <!-- <div id="start-container">
       <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
@@ -83,12 +83,7 @@
     <!-- Question quiz box -->
     <div>
       <h2 id="question-container"></h2>
-      <div id="answers">
-        <!-- <button class="answer-btn option1"></button>
-                <button class="answer-btn option2"></button>
-                <button class="answer-btn option3"></button>
-                <button class="answer-btn option4"></button> -->
-      </div>
+      <div id="answerContainer"></div>
     </div>
 
     <!-- All Done! -->
