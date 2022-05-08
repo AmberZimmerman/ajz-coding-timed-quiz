@@ -3,11 +3,11 @@
   padding: 0;
 }
 
-body {
+/* body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 800;
   font-style: italic;
-}
+} */
 
 .landing-page {
   background-color: black;
@@ -24,13 +24,41 @@ body {
   width: 100%;
   height: auto;
   flex-direction: column;
+  /* 3 lines below are very helpful for centering in a flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para-1 {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 25px;
+  text-align: center;
+}
+
+.circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: white;
+  border-style: solid;
+  margin-top: 50px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .factual-text {
-  margin-top: 450px;
+  margin-top: 280px;
   color: white;
   text-align: center;
-  font-weight: light;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .landing-page-right {
@@ -65,6 +93,16 @@ body {
   height: auto;
   display: flex;
   margin: 262px 0px;
+}
+
+.circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: white;
+  border-style: solid;
+  margin-top: 50px;
 }
 
 .top-bar {
