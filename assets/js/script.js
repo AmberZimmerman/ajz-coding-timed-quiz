@@ -129,6 +129,7 @@ function showQuestions() {
   // for loop that will create a button for each of the options in each index of the array then appends it to the html so that it displays
   for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
     let generatedButton = document.createElement("button");
+    generatedButton.classList.add = "option-button";
     generatedButton.innerText = quizQuestions[questionNumber].options[i];
     answerContainer.append(generatedButton);
 
@@ -221,6 +222,14 @@ goBack.onclick = function () {
   questionContainer.style.visibility = "none";
 };
 
-// Quiz sources:
+// Quiz fact sources:
 // https://facts.net/flamingo-facts/
 // https://www.thespruce.com/fun-facts-about-flamingos-385519
+
+// Quiz photo sources
+// Photo by Marko Blazevic from Pexels
+// Photo by Yigithan Bal from Pexels
+// Photo by Tessa K from Pexels
+// Photo by Len from Pexels
+// Photo by Lucas Pezeta from Pexels
+// Photo by Sơn Bờm from Pexels

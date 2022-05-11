@@ -100,6 +100,7 @@ body {
   font-size: 4.8em;
   font-style: itallic;
   font-weight: 800;
+  font-style: italic;
 }
 
 .img-hero {
@@ -125,17 +126,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   font-size: 25px;
   position: absolute;
   visibility: hidden;
+  width: 100vw;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .top-bar .timer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 160px;
+  width: fit fit-content;
 }
 
 #start-container {
@@ -219,4 +221,10 @@ button:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+button {
+  margin: 4px;
+  width: 550px;
+  font-family: "Nunito Sans", sans-serif;
 }
