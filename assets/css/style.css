@@ -37,6 +37,8 @@ body {
   font-family: "Nunito Sans", sans-serif;
   margin: 25px;
   text-align: center;
+  width: 420px;
+  font-size: 15px;
 }
 
 .hide {
@@ -44,13 +46,13 @@ body {
 }
 
 .circle {
-  height: 35px;
-  width: 35px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   display: inline-block;
   border-color: white;
   border-style: solid;
-  /* margin-top: 50px; */
+  margin-top: 40px;
 }
 
 .circle:hover {
@@ -58,7 +60,7 @@ body {
 }
 
 .circle:hover + .hide {
-  display: block;
+  display: inline-block;
   color: white;
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -78,18 +80,20 @@ body {
 }
 
 .landing-page-right {
+  display: flex;
   flex: 1 0 60%;
   /* height: 100vh;
   flex-direction: column; */
-  height: auto;
+  height: 100vh;
   width: 100vw;
-  flex-flow: column;
   overflow: hidden;
 }
 
 .flamingo-text {
   position: absolute;
-  height: 30vh;
+  position: absolute;
+  height: fit-content;
+  margin: -27px 0px 0px 0px;
 }
 
 .title-text {
@@ -104,22 +108,13 @@ body {
 }
 
 .img-hero {
-  flex: 1 0 70%;
-  object-fit: cover;
-  width: 765px;
-  height: auto;
+  /* flex: 1 0 70%; */
+  object-fit: contain;
+  width: auto;
+  height: 500px;
   display: flex;
-  margin: 262px 0px;
-}
-
-.circle {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  display: inline-block;
-  border-color: white;
-  border-style: solid;
-  margin-top: 50px;
+  position: relative;
+  top: 32%;
 }
 
 .top-bar {
@@ -178,19 +173,24 @@ body {
 }
 
 button {
-  background-color: cornflowerblue;
   border-radius: 1rem;
   display: block;
   font-size: 18px;
   padding: 10px;
   outline: none;
   border: 1px solid;
-  border-color: cornflowerblue;
   cursor: pointer;
+  margin: 4px;
+  width: 550px;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgb(193, 70, 41);
+  border-color: rgb(193, 70, 41);
+  color: white;
 }
 
 button:hover {
-  background-color: white;
+  border-color: rgb(193, 122, 104);
+  background-color: rgb(193, 122, 104);
 }
 
 .finished {
@@ -221,10 +221,4 @@ button:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-button {
-  margin: 4px;
-  width: 550px;
-  font-family: "Nunito Sans", sans-serif;
 }
