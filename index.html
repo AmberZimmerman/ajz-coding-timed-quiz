@@ -25,7 +25,16 @@
 
     <title>Fussy Flamingo Quiz Challenge</title>
   </head>
+
   <body>
+    <header class="top-bar">
+      <div class="view-highscores">View Highscores</div>
+      <div class="timer">
+        <div class="time-left">Time Left</div>
+        <div id="countdown">75</div>
+      </div>
+    </header>
+
     <div class="landing-page" id="start-container">
       <div class="landing-page-left">
         <h3 class="factual-text">Factual or far-flung?</h3>
@@ -58,13 +67,6 @@
       </div>
     </div>
 
-    <header class="top-bar">
-      <div class="view-highscores">View Highscores</div>
-      <div class="timer">
-        <div class="time-left">Time Left</div>
-        <div id="countdown">75</div>
-      </div>
-    </header>
     <!-- This will be the beginging screen. Adding hide class to eventually hide -->
     <!-- <div id="start-container">
       <h1 class="quiz-challenge">The Art History Quiz Challenge</h1>
@@ -80,15 +82,16 @@
     </div> -->
 
     <!-- Question quiz box -->
-    <div>
+    <div class="quiz-container">
+      <img class="img-question" />
       <h2 id="question-container"></h2>
       <div id="answerContainer"></div>
     </div>
 
     <!-- All Done! -->
     <div class="finished">
-      <h2 class="all-done">All Done!</h2>
-      <div class="final-score">You're final score is..</div>
+      <h2>Game Over</h2>
+      <div class="final-score"></div>
       <form id="myForm">
         Your Initials: <input type="text" name="fname" value="Donald" />
         <input type="submit" value="Submit" />

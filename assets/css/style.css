@@ -72,6 +72,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* .quiz-container {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  margin-left: 400px;
+  background-color: rgb(40, 63, 55);
+} */
+
 .factual-text {
   margin-top: 280px;
   color: white;
@@ -203,6 +211,7 @@ button:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
   /* prevent default */
 }
 
@@ -221,4 +230,10 @@ button:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.img-question {
+  position: absolute;
+  margin: 180px -50px 0px 0px;
+  height: 500px;
 }

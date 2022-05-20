@@ -55,6 +55,7 @@ let quizQuestions = [
       "4 to 8 pounds",
       "15 to 20 pounds",
     ],
+    image: "5",
   },
   {
     // index of 1
@@ -64,6 +65,7 @@ let quizQuestions = [
       "The ancient people of Rome used to eat this part of the flamingo and considered it a delicacy?",
     answer: "Tongue",
     options: ["Tongue", "Stomach", "Eyes", "Leg"],
+    image: "4",
   },
   {
     // question and answers 3
@@ -72,6 +74,7 @@ let quizQuestions = [
       "A wild flamingo's color comes from its diet which includes shrimp, plankton, algae, and crustaceans. These foods are all high in ___ which gives them their pink/orange hues.",
     answer: "Carotene",
     options: ["Dornic", "Ashwagandha", "Spirulina", "Carotene"],
+    image: "3",
   },
   {
     // question and answers 4
@@ -85,6 +88,7 @@ let quizQuestions = [
       "55- to 65-inches long",
       "70- to 80-inches long",
     ],
+    image: "1",
   },
   {
     // question and answers 5
@@ -92,18 +96,21 @@ let quizQuestions = [
     question: `The word "flamingo" comes from the Spanish and Latin word "flamenco," meaning ____`,
     answer: "Fire",
     options: ["Fierce", "Dance", "Flight", "Fire"],
+    image: "2",
   },
 ];
 
 let questionNumber = 0;
 let score = 0;
 let secondsLeft = 75;
-let highScores = [];
+let initialHighScores = [];
 let timerInterval;
 
 // Declaring variables that select html elements
 const startBtn = document.getElementById("start-btn");
 const startContainer = document.getElementById("start-container");
+const imgQuestion = document.querySelector(".img-question");
+
 const questionContainer = document.getElementById("question-container");
 const answerContainer = document.getElementById("answerContainer");
 const topBar = document.querySelector(".top-bar");
@@ -111,6 +118,15 @@ const timer = document.querySelector(".timer");
 const countdown = document.getElementById("countdown");
 const goBack = document.getElementById("back");
 const clear = document.getElementById("clear");
+const myForm = document.getElementById("myForm");
+const finished = document.querySelector(".finished");
+const finalScore = document.querySelector(".final-score");
+
+// Check for local storage
+if (!localStorage.getItem("highScores")) {
+  const highScores = JSON.stringify(initialHighScores);
+  localStorage.setItem("highScores", highScores);
+}
 
 // Function to start the quiz
 startBtn.onclick = function () {
@@ -125,6 +141,15 @@ startBtn.onclick = function () {
 // Function to show question and options
 function showQuestions() {
   questionContainer.innerText = quizQuestions[questionNumber].question;
+
+  for (let i = 0; i < quizQuestions[questionNumber].image.length; i++) {
+    console.log(quizQuestions[questionNumber].image[i]);
+    // imgQuestion.classList.add = `photo-style${[i]}`;
+
+    let flamingoPicture = quizQuestions[questionNumber].image[i];
+    let displayPicture = `./assets/images/flamingo${flamingoPicture}.png`;
+    imgQuestion.src = displayPicture;
+  }
 
   // for loop that will create a button for each of the options in each index of the array then appends it to the html so that it displays
   for (let i = 0; i < quizQuestions[questionNumber].options.length; i++) {
@@ -185,7 +210,7 @@ function advanceQuestion() {
 
 function endgame() {
   console.log("game is over");
-  questionContainer.innerText = "Game Over";
+  questionContainer.style.visibility = "hidden";
   answerContainer.style.visibility = "hidden";
 
   clearInterval(timerInterval);
@@ -195,7 +220,17 @@ function endgame() {
   scoreEl.innerText = `Your Score: ${secondsLeft}`;
   scoreEl.classList.add = "display-score";
   console.log(secondsLeft);
-  answerContainer.appendChild(scoreEl);
+  finalScore.appendChild(scoreEl);
+
+  finished.style.visibility = "visible";
+
+  document.getElementById("myForm").addEventListener("click", function (event) {
+    event.preventDefault();
+    let initials = myForm.value;
+    console.log(myForm);
+    initialHighScores.push(initials);
+    localStorage.setItem("highScores", initialHighScores);
+  });
 }
 
 // Select the timer element by its class
